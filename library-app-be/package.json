@@ -1,0 +1,20 @@
+{
+  "name": "library-app-be",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "validator": "^13.9.0",
+    "mongoose": "^7.4.0",
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "author": "Mohit Bhatt",
+  "license": "ISC",
+  "description": ""
+}
