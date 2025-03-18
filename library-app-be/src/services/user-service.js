@@ -1,17 +1,17 @@
 const User = require("../models/user");
 const InputValidationException = require("../exceptions/inputValidationexception");
 const addNewUser = async (user) => {
-    try {
+  try {
       user = new User(user);
       await user.save();
       console.log(`User with ID: ${user._id} was added in the database.`);
       const token = user.generateToken();
       return { user, token };
-    } catch (err) {
+  } catch (err) {
       console.error(`Please enter valid fields. The error is: ${err}`);
       throw new InputValidationException(err.message);
-    }
-  };
+  }
+};
 const loginUser = async({email,password})=>{
     const user  = await User.findByEmailAndPasswordForAuth(
     email,
